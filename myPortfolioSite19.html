@@ -1,0 +1,83 @@
+<!--HTML Setup-->
+<html>
+<head>
+    <title>Bailey Mazur</title>
+    <link rel="stylesheet" href="css/myPortfolioSite19.css">
+</head>
+<body>
+<!--topnav section-->
+<header class="navigation">
+    <h1>Bailey Mazur UX Designer</h1>
+    <div class="inline-block" class="logo">
+        <img src="../myPortfolioSite19/img/Logo.png" alt="../myPortfolioSite19/img/alternateLogo.png">
+    </div>
+    <nav class="inline-block">
+        <ul>
+            <li class="inline-block">About Me</li>
+            <li class="inline-block">UX Projects</li>
+            <li class="inline-block">Game Projects</li>
+            <li class="inline-block">2D Art</li>
+            <li class="inline-block">3D Art</li>
+        </ul>
+    </nav>
+</header>
+    <!--body content-->
+<section class="heroImg">
+    <div class="content">
+        <p> I am a UX designer with a background in art and game design. 
+            My passion lies in building engaging interactive experiences. 
+            My strength lies in my constantly evolving skill set and my ability to adapt to new challenges. 
+        </p>
+    <div class="flex-container">
+        <img class="heroImg" src="../myPortfolioSite19/img/Test1.png" alt="../myPortfolioSite19/img/Test3.png">
+        <img class="heroImg" src="../myPortfolioSite19/img/Test2.png" alt="../myPortfolioSite19/img/Test1.png">
+        <img class="heroImg" src="../myPortfolioSite19/img/Test3.png" alt="../myPortfolioSite19/img/Test2.png">
+    </div>
+    <div class="button-container">
+        <button>
+        Download my resume
+        </button>
+    </div>
+</div>
+</section>
+<!--section for my work-->
+<section class="myWork">
+    <h1>My Work</h1>
+    <div class="workDisplayContainer">
+        <button class="workDisplayContainerLeft" onclick="plusDivs(-1)">&#10094;</button>
+        <img class="workSlides" src="../myPortfolioSite19/img/slideTest1.png">
+        <img class="workSlides" src="../myPortfolioSite19/img/slideTest2.png">
+        <img class="workSlides" src="../myPortfolioSite19/img/slideTest3.png">
+        <button class="workDisplayContainerRight" onclick="plusDivs(1)">&#10095;</button>
+    </div>
+    <!--Script for rotating between images in a set-->
+    <script>
+        var slideIndex = 1;
+        showDivs(slideIndex);
+        function plusDivs(n){
+            showDivs(slideIndex += n);
+        }
+        function showDivs(n){
+            var i;
+            var x = document.getElementsByClassName("workSlides");
+            if (n > x.length) {slideIndex = 1}
+            if (n < 1) {slideIndex = x.length}
+            for (i = 0; i < x.length; i++) {
+                x[i].style.display = "none";
+            }
+            x[slideIndex-1].style.display = "block";
+        }
+    </script>
+</section>
+    <!--footer section-->
+    <footer>
+        <h2>Contact</h2>
+        <ul>
+            <li class="inline-block">614-***-***</li>
+            <li class="inline-block">bmmazur183@gmail.com</li>
+            <li class="inline-block">twitter.com/baileymazur</li>
+            <li class="inline-block">linkedin.com/in/bailey-mazur/</li>
+        </ul>
+    </footer>
+</body>
+</html>
