@@ -7,7 +7,8 @@
 <body>
 <!--topnav section-->
 <header class="navigation">
-    <h1>Bailey Mazur UX Designer</h1>
+    <h1>Bailey Mazur 
+        UX Designer</h1>
     <div class="inline-block" class="logo">
         <img src="../myPortfolioSite19/img/Logo.png" alt="../myPortfolioSite19/img/alternateLogo.png">
     </div>
@@ -23,7 +24,7 @@
 </header>
     <!--body content-->
 <section class="heroImg">
-    <div class="content">
+<div class="content">
         <p> I am a UX designer with a background in art and game design. 
             My passion lies in building engaging interactive experiences. 
             My strength lies in my constantly evolving skill set and my ability to adapt to new challenges. 
@@ -33,10 +34,11 @@
         <img class="heroImg" src="../myPortfolioSite19/img/Test2.png" alt="../myPortfolioSite19/img/Test1.png">
         <img class="heroImg" src="../myPortfolioSite19/img/Test3.png" alt="../myPortfolioSite19/img/Test2.png">
     </div>
-    <div class="button-container">
-        <button>
-        Download my resume
-        </button>
+    <div id="overlay" onclick="off()">
+    <div id="img"><img src="../myPortfolioSite19/img/resume-1-1.png" alt=""></div>
+    </div>
+    <div style="padding:20px">
+        <button onclick="on()">Download my resume</button>
     </div>
 </div>
 </section>
@@ -50,24 +52,6 @@
         <img class="workSlides" src="../myPortfolioSite19/img/slideTest3.png">
         <button class="workDisplayContainerRight" onclick="plusDivs(1)">&#10095;</button>
     </div>
-    <!--Script for rotating between images in a set-->
-    <script>
-        var slideIndex = 1;
-        showDivs(slideIndex);
-        function plusDivs(n){
-            showDivs(slideIndex += n);
-        }
-        function showDivs(n){
-            var i;
-            var x = document.getElementsByClassName("workSlides");
-            if (n > x.length) {slideIndex = 1}
-            if (n < 1) {slideIndex = x.length}
-            for (i = 0; i < x.length; i++) {
-                x[i].style.display = "none";
-            }
-            x[slideIndex-1].style.display = "block";
-        }
-    </script>
 </section>
     <!--footer section-->
     <footer>
@@ -80,4 +64,5 @@
         </ul>
     </footer>
 </body>
+    <script src="js/index.js"></script>
 </html>
