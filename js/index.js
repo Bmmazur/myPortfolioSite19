@@ -14,11 +14,33 @@ function showDivs(n){
     }
     x[slideIndex-1].style.display = "block";
 }
-//script for displaying my resume overlay//
-function on() {
-  document.getElementById("overlay").style.display = "block";
+
+//Variables for my resume modal//
+var modal = document.getElementById("resumeModal");
+var btn = document.getElementById("resumeButton");
+var span = document.getElementsByClassName("close")[0];
+
+//script for displaying my resume as a modal element//
+btn.onclick = function() {
+    modal.style.display = "block";
 }
 
-function off() {
-  document.getElementById("overlay").style.display = "none";
+span.onclick = function() {
+    modal.style.display = "none";
 }
+
+window.onclick = function() {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+//This function toggles between responsive and topnav//
+function responsiveNav() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+      x.className += " responsive";
+    } else {
+      x.className = "topnav";
+    }
+  }

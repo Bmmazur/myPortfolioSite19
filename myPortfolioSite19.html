@@ -1,67 +1,82 @@
 <!--HTML Setup-->
 <html>
-<head>
-    <title>Bailey Mazur</title>
-    <link rel="stylesheet" href="css/myPortfolioSite19.css">
-</head>
+    <head>
+        <title>Bailey Mazur</title>
+        <link rel="stylesheet" href="css/myPortfolioSite19.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    </head>
 <body>
 <!--topnav section-->
-<header class="navigation">
+<header class="topnav">
     <h1>Bailey Mazur UX Designer</h1>
-    <div class="inline-block" class="logo">
-        <img src="../myPortfolioSite19/img/Logo.png" alt="../myPortfolioSite19/img/alternateLogo.png">
-    </div>
-    <nav class="inline-block">
-        <ul>
-            <li class="inline-block">About Me</li>
-            <li class="inline-block">UX Projects</li>
-            <li class="inline-block">Game Projects</li>
-            <li class="inline-block">2D Art</li>
-            <li class="inline-block">3D Art</li>
-        </ul>
-    </nav>
+        <div class="logo">
+            <img src="../myPortfolioSite19/img/Logo.png" alt="../myPortfolioSite19/img/alternateLogo.png">
+        </div>
+        <div class="topnav" id="myTopnav">
+            <a href="javascript:void(0);" class="icon" onclick="responsiveNav()">
+                <i class="fa fa-bars"></i>
+                    <a href="about.asp">About Me</a>
+                    <a href="ux.asp">UX Projects</a>
+                    <a href="game.asp">Game Projects</a>
+                    <a href="twoD.asp">2D Art</a>
+                    <a href="threeD.asp">3D Art</a>
+              </a>
+        </div>
 </header>
     <!--body content-->
 <section class="heroImg">
-<div class="content">
-        <p> I am a UX designer with a background in art and game design. 
-            My passion lies in building engaging interactive experiences. 
-            My strength lies in my constantly evolving skill set and my ability to adapt to new challenges. 
-        </p>
-    <div class="flex-container">
-        <img class="heroImg" src="../myPortfolioSite19/img/Test1.png" alt="../myPortfolioSite19/img/Test3.png">
-        <img class="heroImg" src="../myPortfolioSite19/img/Test2.png" alt="../myPortfolioSite19/img/Test1.png">
-        <img class="heroImg" src="../myPortfolioSite19/img/Test3.png" alt="../myPortfolioSite19/img/Test2.png">
+    <div class="content">
+            <p> I am a UX designer with a background in art and game design. 
+                My passion lies in building engaging interactive experiences. 
+                My strength lies in my constantly evolving skill set and my ability to adapt to new challenges. 
+            </p>
+        <div class="flex-container">
+            <img class="heroImg" src="../myPortfolioSite19/img/Test1.png" alt="../myPortfolioSite19/img/Test3.png">
+            <img class="heroImg" src="../myPortfolioSite19/img/Test2.png" alt="../myPortfolioSite19/img/Test1.png">
+            <img class="heroImg" src="../myPortfolioSite19/img/Test3.png" alt="../myPortfolioSite19/img/Test2.png">
+        </div>
+            <!--Button opens modal-->
+            <button id="resumeButton">View my resume</button>
+        <!--The modal itself with content inside-->
+        <div id="resumeModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <picture>
+                    <source
+                    media="(min-width: 650px)"
+                    srcset="../myPortfolioSite19/img/resumeDesktop.png">
+                    <source
+                    media="(min-width: 465px)"
+                    srcset="../myPortfolioSite19/img/resumeMobile.png">
+                    <img
+                    src="../myPortfolioSite19/img/resumeDesktop.png"
+                    alt="../myPortfolioSite19/img/resumeMobile.png">
+                </picture>
+            </div>
+        </div>
     </div>
-    <div id="overlay" onclick="off()">
-    <div id="img"><img src="../myPortfolioSite19/img/resume-1-1.png" alt=""></div>
-    </div>
-    <div style="padding:20px">
-        <button onclick="on()">Download my resume</button>
-    </div>
-</div>
 </section>
 <!--section for my work-->
 <section class="myWork">
     <h1>My Work</h1>
-    <div class="workDisplayContainer">
-        <button class="workDisplayContainerLeft" onclick="plusDivs(-1)">&#10094;</button>
-        <img class="workSlides" src="../myPortfolioSite19/img/slideTest1.png">
-        <img class="workSlides" src="../myPortfolioSite19/img/slideTest2.png">
-        <img class="workSlides" src="../myPortfolioSite19/img/slideTest3.png">
-        <button class="workDisplayContainerRight" onclick="plusDivs(1)">&#10095;</button>
-    </div>
+        <div class="workDisplayContainer">
+            <button class="workDisplayContainerLeft" onclick="plusDivs(-1)">&#10094;</button>
+                <img class="workSlides" src="../myPortfolioSite19/img/slideTest1.png">
+                <img class="workSlides" src="../myPortfolioSite19/img/slideTest2.png">
+                <img class="workSlides" src="../myPortfolioSite19/img/slideTest3.png">
+            <button class="workDisplayContainerRight" onclick="plusDivs(1)">&#10095;</button>
+        </div>
 </section>
     <!--footer section-->
     <footer>
-        <h2>Contact</h2>
-        <ul>
-            <li class="inline-block">614-***-***</li>
-            <li class="inline-block">bmmazur183@gmail.com</li>
-            <li class="inline-block">twitter.com/baileymazur</li>
-            <li class="inline-block">linkedin.com/in/bailey-mazur/</li>
-        </ul>
+        <h2>Contact Info</h2>
+            <ul>
+                <li class="inline-block">614-***-***</li>
+                <li class="inline-block">bmmazur183@gmail.com</li>
+                <li class="inline-block">twitter.com/baileymazur</li>
+                <li class="inline-block">linkedin.com/in/bailey-mazur/</li>
+            </ul>
     </footer>
 </body>
-    <script src="js/index.js"></script>
+<script src="js/index.js"></script>
 </html>
